@@ -14,37 +14,32 @@
 
 <style>
 	section {
-		width: 100%;
+		/* width: 100%; */
 		min-height: 100vh;
-
-		padding: 320px 20%;
+		padding: 320px 24px;
 
 		display: grid;
 		justify-content: center;
-		align-content: center;
 
-		/* grid-template-columns: repeat(3, 320px); */
+		/* TODO При увеличении количества проектов сделай сетку на 5 или 7 колонок. */
 		grid-template-columns: repeat(3, 400px);
 		grid-gap: 12px;
 	}
-	/* @media (max-width: 1280px) { */
-	/* 	section { */
-	/* 		padding: 120px 5%; */
-	/* 		grid-template-columns: repeat(3, 1fr); */
-	/* 		grid-gap: 2%/3.36%; */
-	/* 	} */
-	/* } */
-	@media (max-width: 1280px) {
+	@media (max-width: 1365px) {
 		section {
-			padding: 80px 5%;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, minmax(30%, 400px));
+		}
+	}
+	@media (max-width: 1079px) {
+		section {
+			padding: 320px 16px;
+			grid-template-columns: repeat(2, minmax(30%, 400px));
 		}
 	}
 	@media (max-width: 600px) {
 		section {
-			padding: 240px 4%;
-			grid-template-columns: repeat(1, 1fr);
-			grid-gap: 16px;
+			padding: 320px 12px;
+			grid-template-columns: repeat(1, minmax(30%, 400px));
 		}
 	}
 </style>

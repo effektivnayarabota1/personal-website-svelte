@@ -26,15 +26,11 @@
 <style>
 	.card {
 		aspect-ratio: 400/240;
-		/* width: 100%;
-		height: 100%; */
+		width: 100%;
+		max-width: 400px;
 
 		border-radius: 8px;
 		overflow: hidden;
-
-		/* width: 360px;
-		height: 240px;
-		overflow: hidden; */
 
 		background-image: url(./home/card/cover.jpg);
 		background-size: cover;
