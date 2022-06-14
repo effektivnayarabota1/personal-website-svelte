@@ -1,2 +1,4 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<a href="/home">home</a>
+<a href="/image">image</a>
+<a href="/text">text</a>
+<a href="/gallery">gallery</a>

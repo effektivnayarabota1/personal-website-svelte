@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap");
+
+:root {
+	--black: #000000;
+	--grey-33: #545454;
+	--grey-47: #787878;
+	--grey-77: #c5c5c5;
+	--white: #ffffff;
+	--blue: #abffff;
+	--red: #ff0000;
+}
+
+.modal {
+	color: white;
+	mix-blend-mode: difference;
+}
+
+* {
+	font-family: "Cormorant Garamond";
+}
+h1 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 80px;
+	line-height: 80px;
+
+	color: var(--black);
+}
+h1 > a {
+	text-decoration-line: underline;
+}
+h1 > button {
+	font-style: italic;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 48px;
+	text-decoration-line: underline;
+	text-transform: uppercase;
+}
+h2 {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 32px;
+
+	color: var(--black);
+}
+p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	letter-spacing: 0.025em;
+
+	color: var(--black);
+}
+
+.image {
+	font-family: "Roboto";
+}
+.image h1 {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 40px;
+}
+.image > h1 > a {
+	text-decoration-line: underline;
+}
+.image > p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+	letter-spacing: 0.003em;
+}
+.image > p.desc {
+	font-style: italic;
+	font-weight: 300;
+
+	letter-spacing: 0.003em;
+}
+.mono a,
+.mono p {
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+
+	color: inherit;
+}
+.mono a {
+	text-decoration-line: underline;
+}
+
+.difference {
+	color: var(--white);
+	mix-blend-mode: difference;
+}
+
+/* TODO Сверстать кнопку h1 > button */
+@media (max-width: 600px) {
+	h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+	h2 {
+		font-size: 24px;
+		line-height: 24px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.image h1 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.image p {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
