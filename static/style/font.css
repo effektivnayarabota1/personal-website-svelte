@@ -2,21 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap");
 
-:root {
-	--black: #000000;
-	--grey-33: #545454;
-	--grey-47: #787878;
-	--grey-77: #c5c5c5;
-	--white: #ffffff;
-	--blue: #abffff;
-	--red: #ff0000;
-}
-
-.modal {
-	color: white;
-	mix-blend-mode: difference;
-}
-
 * {
 	font-family: "Cormorant Garamond";
 }
@@ -95,11 +80,6 @@ p {
 }
 .mono a {
 	text-decoration-line: underline;
-}
-
-.difference {
-	color: var(--white);
-	mix-blend-mode: difference;
 }
 
 /* TODO Сверстать кнопку h1 > button */

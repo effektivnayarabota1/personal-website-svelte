@@ -4,19 +4,17 @@
 
 <div class="card">
 	<div class="card_hover">
+		<div class="card_highlight">
+			<div class="line1" />
+			<div class="line2" />
+		</div>
 		<div class="card_text  mono">
-			<a href="#" class="difference"
-				>Redesign personal website/portfolio</a
-			>
-			<p class="difference">
+			<a href="#">Redesign personal website/portfolio</a>
+			<p>
 				<!-- TODO Ограничить количество строк -->
 				Сайт разрабатываю для художника (себя), поэтому бОльшая часть внимания
 				пользователя должна быть посвящена изображениям.
 			</p>
-		</div>
-		<div class="card_highlight">
-			<div class="line1" />
-			<div class="line2" />
 		</div>
 		<img class="card_texture" src={cover} alt="Текстура для анимации." />
 		<div class="card_white" />

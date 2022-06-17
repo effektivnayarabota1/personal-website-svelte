@@ -1,0 +1,26 @@
+:root {
+	--black: #000000;
+	--grey-33: #545454;
+	--grey-47: #787878;
+	--grey-77: #c5c5c5;
+	--white: #ffffff;
+	--blue: #abffff;
+	--red: #ff0000;
+}
+
+.modal {
+	color: white;
+	mix-blend-mode: difference;
+}
+
+/* TODO Сделать */
+/* .difference, */
+/* .difference a, */
+/* .difference p { */
+/* 	color: var(--white); */
+/* 	mix-blend-mode: difference; */
+/* 	background-blend-mode: difference; */
+/* 	background: white; */
+/* 	-webkit-background-clip: text; */
+/* 	-webkit-text-fill-color: transparent; */
+/* } */

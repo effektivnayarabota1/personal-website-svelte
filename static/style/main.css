@@ -1,0 +1,19 @@
+body::-webkit-scrollbar {
+	width: 8px;
+}
+body::-webkit-scrollbar-track {
+	background: var(--grey-77);
+}
+body::-webkit-scrollbar-thumb {
+	background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+	background: var(--grey-47);
+}
+/* TODO Темная тема */
+/* .container-dark { */
+/* 	background: #212121; */
+/* } */
+/* .container-dark:hover::-webkit-scrollbar-thumb { */
+/* 	background: #4a4a4a; */
+/* } */
