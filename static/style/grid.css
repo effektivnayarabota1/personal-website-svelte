@@ -19,6 +19,7 @@
 		var(--text-width);
 	grid-column-gap: var(--gap);
 	grid-row-gap: 16px;
+	grid-template-rows: masonry;
 }
 @media (max-width: 1919px) {
 	.grid {
@@ -40,17 +41,22 @@
 	.grid {
 		--padding: 24px;
 		--gap: 16px;
+		/* TODO Правильная верстка, но багует. Исправить */
+		/* --gaps: calc(var(--gap) * 1); */
 		--gaps: calc(var(--gap) * 2);
 		--flex-column: calc(100% - var(--fixed-part));
-		grid-template-columns: var(--flex-column) auto var(--flex-column);
+		grid-template-columns:
+			var(--flex-column)
+			auto var(--flex-column);
 	}
 }
 @media (max-width: 1023px) {
 	.grid {
 		--gap: 16px;
-		--gaps: calc(var(--gap) * 2);
+		--gaps: calc(var(--gap) * 1);
 		--flex-column: calc(calc(100% - var(--fixed-part)));
-		grid-template-columns: var(--flex-column) calc(var(--flex-column) * 2) auto;
+		/* grid-template-columns: var(--flex-column) calc(var(--flex-column) * 2) auto; */
+		grid-template-columns: var(--flex-column) var(--flex-column) auto;
 	}
 }
 @media (max-width: 767px) {
