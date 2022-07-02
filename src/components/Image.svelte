@@ -1,34 +1,66 @@
 <script>
+	import { onMount } from "svelte/internal";
 	import Text from "./Image_text.svelte";
+
+	let innerWidth;
+	let innerHeight;
+	let vertical = false;
+	let indicator = true;
+
+	let grid;
+	let gap;
+	let padding;
+
+	let columns;
+
+	// $: if (grid) {
+	// 	gap = parseInt(getComputedStyle(grid).columnGap, 10);
+	// 	padding = parseInt(getComputedStyle(grid).paddingTop, 10);
+	// }
+
+	let img;
+	let img_width;
+	let img_height;
+
+	onMount(() => {
+		img_width = img.width;
+		img_height = img.height;
+		gap = parseInt(getComputedStyle(grid).columnGap, 10);
+		padding = parseInt(getComputedStyle(grid).paddingTop, 10);
+		if (gap + padding * 2 + img_width < outerWidth - 600) {
+			vertical = true;
+			if (img_width > 1080) {
+				// TODO Если изображине больше суммы 2й и 3й колонки, тогда оно начинает занимать четверную колонку.
+				columns = getComputedStyle(grid)
+					.gridTemplateColumns.split(" ")
+					.map((column) => {
+						return parseInt(column, 10);
+					});
+				let colSum = columns[1] + columns[2] + gap;
+				console.log(colSum);
+				if (colSum < img_width) {
+					console.log("fullSize");
+					// TODO Настроить figure container под grid, а не flexbox;
+					// TODO Если изображине больше суммы 2й, 3й и 4й колонки, тогда оно начинает занимать все колонки.
+				}
+			} else if (img_height + padding + 80 < innerHeight) {
+				indicator = false;
+				// TODO Пробрасываю индикатор на текстовый компонент.
+			}
+		}
+	});
 </script>
 
-<section class="grid">
-	<figure class="image">
+<svelte:window bind:innerWidth bind:innerHeight />
+
+<section class="grid" bind:this={grid}>
+	<figure class:vertical class="image">
 		<picture>
-			<img src="vertical.jpg" alt="" />
+			<img bind:this={img} src="horizontal.jpg" alt="" />
+			<!-- on:load={handleImageLoad} -->
 		</picture>
 		<figcaption>
-			<Text />
-		</figcaption>
-	</figure>
-</section>
-<section class="grid">
-	<figure class="image">
-		<picture>
-			<img src="horizontal.jpg" alt="" />
-		</picture>
-		<figcaption>
-			<Text />
-		</figcaption>
-	</figure>
-</section>
-<section class="grid">
-	<figure class="image">
-		<picture>
-			<img src="square.jpg" alt="" />
-		</picture>
-		<figcaption>
-			<Text />
+			<Text {vertical} {indicator} />
 		</figcaption>
 	</figure>
 </section>
@@ -61,6 +93,9 @@
 		figure {
 			grid-column: 1/4;
 		}
+		.vertical > figcaption {
+			padding: calc(var(--padding) + 8px) 8px 0;
+		}
 	}
 	@media (max-width: 1715px) {
 		/* TODO Не получается сделать перебрасыание текстового блока без JS */
@@ -70,6 +105,10 @@
 			justify-content: flex-start;
 			align-content: flex-start;
 			gap: 0;
+		}
+		.vertical {
+			flex-wrap: nowrap;
+			gap: var(--gap);
 		}
 		picture {
 			padding: var(--padding) 0 0;

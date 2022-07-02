@@ -1,4 +1,9 @@
-<div class="indicator">
+<script>
+	export let vertical;
+	export let indicator;
+</script>
+
+<div class:vertical class="indicator">
 	<img src="navigation/text-indicator.svg" alt="unread text indicator" />
 </div>
 <h1>Форма и Цвет храма.</h1>
@@ -31,6 +36,9 @@
 			display: flex;
 			align-items: center;
 			flex-direction: column;
+		}
+		.vertical.indicator {
+			display: none;
 		}
 	}
 </style>
