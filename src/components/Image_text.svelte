@@ -3,7 +3,7 @@
 	export let indicator;
 </script>
 
-<div class:vertical class="indicator">
+<div class:vertical class:indicator>
 	<img src="navigation/text-indicator.svg" alt="unread text indicator" />
 </div>
 <h1>Форма и Цвет храма.</h1>
@@ -18,27 +18,32 @@
 <p class="desc">105x75, акрил, холст лен</p>
 
 <style>
+	div {
+		display: none;
+	}
+	.indicator {
+		width: 64px;
+		height: 80px;
+		padding-top: 6px;
+
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
 	h1 {
 		margin-bottom: 24px;
 	}
 	p {
 		margin-bottom: 16px;
 	}
-	.indicator {
-		width: 80px;
-		height: 80px;
-		padding-top: 8px;
-
-		display: none;
-	}
-	@media (max-width: 1715px) {
+	@media (max-width: 767px) {
 		.indicator {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
+			width: 36px;
+			height: 48px;
+			padding: 2px;
 		}
-		.vertical.indicator {
-			display: none;
+		.indicator img {
+			height: 6px;
 		}
 	}
 </style>

@@ -11,6 +11,7 @@
 	--flex-column: calc(calc(100% - var(--fixed-part)) / 3);
 
 	width: 100%;
+	max-width: 1920px;
 	padding: 0 var(--padding);
 
 	display: grid;
@@ -19,7 +20,6 @@
 		var(--text-width);
 	grid-column-gap: var(--gap);
 	grid-row-gap: 16px;
-	grid-template-rows: masonry;
 }
 @media (max-width: 1919px) {
 	.grid {
@@ -61,7 +61,7 @@
 }
 @media (max-width: 767px) {
 	.grid {
-		--padding: 16px;
+		--padding: 10px;
 		grid-template-columns: auto;
 	}
 }

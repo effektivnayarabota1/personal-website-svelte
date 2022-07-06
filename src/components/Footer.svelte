@@ -4,53 +4,55 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 
-<footer class="grid mono">
-	<nav class="main">
-		<a href="#">Галлерея</a>
-		<a href="#">Связь</a>
-	</nav>
-	<nav class="social">
-		<span>
-			<a href="">Telegram</a>
-			<a href="">Gmail</a>
-			<a href="">Instagram</a>
-			<a href="">TgChanel</a>
-			{#if windowWidth >= 1920}
-				<a href="">SoundCloud:</a>
-				<div class="sc">
+<footer>
+	<div class="grid mono">
+		<nav class="main">
+			<a href="#">Галлерея</a>
+			<a href="#">Связь</a>
+		</nav>
+		<nav class="social">
+			<span>
+				<a href="">Telegram</a>
+				<a href="">Gmail</a>
+				<a href="">Instagram</a>
+				<a href="">TgChanel</a>
+				{#if windowWidth >= 1920}
+					<a href="">SoundCloud:</a>
+					<div class="sc">
+						<a href="">Плейлист культа Богини Цветов</a>
+						<span>
+							<a href="">0</a>
+							<a href="">.33</a>
+							<a href="">.67</a>
+							<a href="">.777</a>
+							<a href="">1</a>
+						</span>
+					</div>
+				{:else if windowWidth >= 1280}
+					<a href="">SoundCloud</a>
 					<a href="">Плейлист культа Богини Цветов</a>
-					<span>
-						<a href="">0</a>
-						<a href="">.33</a>
-						<a href="">.67</a>
-						<a href="">.777</a>
-						<a href="">1</a>
-					</span>
-				</div>
-			{:else if windowWidth >= 1280}
-				<a href="">SoundCloud</a>
-				<a href="">Плейлист культа Богини Цветов</a>
-			{:else}
-				<a href="">SoundCloud</a>
-			{/if}
-		</span>
-	</nav>
-	<nav class="promo">
-		<a href="">
-			Телеграм-бот для Notion – <br />
-			Текстовые, голосовые и фото заметки в ноушн через телегу!
-		</a>
-		<a href="">
-			ПУТЬ К ХРАМУ БОГИНИ ЦВЕТОВ – <br />
-			... Ее взгляд также был очень разным. Зависел толи он угла зрения, толи
-			от ее расположения духа. От теплого, невероятно нежного и успокаивающего,
-			до холодного, прорезающего на сквозь и бросающего в жар...
-		</a>
-	</nav>
-	<nav class="info">
-		<p>EFFECTIVNAYARABOTA1!</p>
-		<p>2022 Novosibirsk © All rights reserved</p>
-	</nav>
+				{:else}
+					<a href="">SoundCloud</a>
+				{/if}
+			</span>
+		</nav>
+		<nav class="promo">
+			<a href="">
+				Телеграм-бот для Notion – <br />
+				Текстовые, голосовые и фото заметки в ноушн через телегу!
+			</a>
+			<a href="">
+				ПУТЬ К ХРАМУ БОГИНИ ЦВЕТОВ – <br />
+				... Ее взгляд также был очень разным. Зависел толи он угла зрения,
+				толи от ее расположения духа. От теплого, невероятно нежного и успокаивающего,
+				до холодного, прорезающего на сквозь и бросающего в жар...
+			</a>
+		</nav>
+		<nav class="info">
+			<p>EFFECTIVNAYARABOTA1!</p>
+			<p>2022 Novosibirsk © All rights reserved</p>
+		</nav>
+	</div>
 </footer>
 
 <style>
@@ -58,6 +60,9 @@
 	footer {
 		padding-top: 80px;
 		padding-bottom: 96px;
+
+		display: flex;
+		justify-content: center;
 
 		background-image: url(./footer/clouds.jpg);
 		background-size: cover;
